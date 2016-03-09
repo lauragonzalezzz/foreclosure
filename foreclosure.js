@@ -53,8 +53,22 @@ function borrower(loan) {
 		}
 		makePayment : function() {
 			if (account.funds > loan.getMonthlyPayment()) {
-				
+				account.funds -= loan.getMonthlyPayment();
+				loan.receivePayment(loan.getMonthlyPayment());
+			} else {
+				receivePayment(account.getFunds());
+				account.funds = 0;
 			}
 		}
+		payDay : function() {
+			account.funds += account.monthlyIncome;
+		}
 	}
+}
+
+loan(stevesLoan);
+steve = borrower(stevesLoan);
+
+while (stevesLoan.isForclosed() !== true) {
+	steve
 }
