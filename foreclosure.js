@@ -23,20 +23,20 @@ function loan() {
 	return {
 		getBalance : function() {
 			return account.balance;
-		}
+		},
 		receivePayment : function(amount) {
 			if (amount < account.monthlyPayment) {
 				missPayment();
-				account.balance = account.balance - amount;
+				account.balance -= amount;
 			}
-		}
+		},
 		getMonthlyPayment : function() {
 			return account.monthlyPayment;
-		}
+		},
 		isForeclosed : function() {
 			return account.foreclosed;
 		};
-	}
+	};
 
 
 }
@@ -70,5 +70,7 @@ loan(stevesLoan);
 steve = borrower(stevesLoan);
 
 while (stevesLoan.isForclosed() !== true) {
-	steve
+	steve.payDay();
+	steve.makePayment;
+	month++;
 }
