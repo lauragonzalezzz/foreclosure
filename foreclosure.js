@@ -40,3 +40,21 @@ function loan() {
 
 
 }
+
+function borrower(loan) {
+	var account = {
+		monthlyIncome : 1350,
+		funds : 2800,
+		loan : loan
+	}
+	return {
+		getFunds : function() {
+			return account.funds;
+		}
+		makePayment : function() {
+			if (account.funds > loan.getMonthlyPayment()) {
+				
+			}
+		}
+	}
+}
