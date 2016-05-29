@@ -6,4 +6,4 @@ To run tests:
 
 ```npm install```
 
-```f$ npm test```
+```npm test```
