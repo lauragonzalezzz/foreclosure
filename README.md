@@ -4,6 +4,6 @@
 
 To run tests:
 
-`$npm install
+```npm install```
 
-`$ npm test
+```f$ npm test```
